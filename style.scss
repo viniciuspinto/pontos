@@ -1,0 +1,307 @@
+@import 'animate.css';
+
+$mainColor: #004080;
+$textColor: #000;
+$linkColor: $mainColor;
+$overLinkColor: #0000c0;
+$containerBgColor: #fff;
+$dotActiveBorderColor: #ff6;
+$statusBarBgColor: $mainColor;
+$statusBarFontColor: #fff;
+$menuLinkColor: #ff0;
+$activeExtraLinkColor: #c00;
+$disabledExtraTextColor: #555;
+$playAgainBgColor: $mainColor;
+$playAgainLinkColor: #fff;
+$scoreListDateColor: #777;
+$sayingColor: #008040;
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-touch-callout: none;
+  -moz-user-select: none;
+  -ms-touch-callout: none;
+  -ms-user-select: none;
+  touch-callout: none;
+  user-select: none;
+  // for Android:
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#pontos-container {
+
+  font-family: Verdana, sans-serif;
+  font-size: 100%;
+  color: $textColor;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  background-color: $containerBgColor;
+  cursor: default;
+
+  a {
+    color: $linkColor;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $overLinkColor;
+  }
+
+  .board-bg {
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    .container {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      height: 100%;
+      margin: auto;
+    }
+  }
+
+  .board {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .dot {
+      cursor: pointer;
+      position: absolute;
+      border-style: solid;
+      border-color: transparent;
+      padding: 0;
+      border-radius: 100%;
+    }
+
+    .dot-active {
+      border-color: $dotActiveBorderColor;
+    }
+  }
+
+  .color-c1 { box-shadow: inset 0 0 0 100px rgba(255, 0, 0,   .5); }
+  .color-c2 { box-shadow: inset 0 0 0 100px rgba(0, 255, 0,   .5); }
+  .color-c3 { box-shadow: inset 0 0 0 100px rgba(0, 0, 255,   .5); }
+  .color-c4 { box-shadow: inset 0 0 0 100px rgba(255, 255, 0, .5); }
+  .color-c5 { box-shadow: inset 0 0 0 100px rgba(0, 0, 0,     .5); }
+
+  .status-bar {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    background-color: $statusBarBgColor;
+    color: $statusBarFontColor;
+    text-align: center;
+    font-weight: bold;
+    line-height: 2.3;
+    height: 7%;
+
+    .container {
+
+      .info {
+        float: right;
+        white-space: nowrap;
+        text-align: right;
+        padding-right: 2%;
+        .value {
+          font-weight: normal;
+        }
+      }
+
+      .remaining-moves {
+        margin-right: 1%;
+      }
+
+      .score {
+        margin-left: 1%;
+      }
+      
+      .links {
+        float: left;
+        text-align: left;
+        white-space: nowrap;
+        padding-left: 2%;
+        a {
+          color: $menuLinkColor;
+          margin-right: 15%;
+        }
+      }
+
+    }
+
+  }
+
+  .extras {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    text-align: center;
+
+    .container {
+      .extra {
+        margin: auto;
+        padding: 3%;
+      }
+      .remove-single {
+        float: left;
+      }
+      .remove-color {
+        float: right;
+      }
+      .active {
+        color: $activeExtraLinkColor;
+      }
+      .disabled {
+        color: $disabledExtraTextColor;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  .end-screen {
+    display: none;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+
+    .message {
+      font-size: 150%;
+      margin-top: 0;
+    }
+
+    .play-again {
+      font-size: 200%;
+      width: 70%;
+      background-color: $playAgainBgColor;
+      padding: 2% 5%;
+      margin: auto;
+    }
+
+    .play-again a {
+      color: $playAgainLinkColor;
+    }
+
+    .share {
+      margin-top: 6%;
+    }
+
+    .twitter, .facebook {
+      display: none;
+      margin: auto 2%;
+    }
+
+    .facebook .iframe {
+      width: 100px;
+      height: 20px;
+      border: 0;
+    }
+
+    .high-scores {
+      h3 {
+        margin: 0px;
+      }
+      ul {
+        margin: 3%;
+        list-style-type: none;
+        padding: 0;
+      }
+      width: 80%;
+      margin: auto;
+      margin-top: 7%;
+      border-radius: 15%;
+      .list {
+        .score {
+          font-weight: bold;
+          text-align: right;
+          float: left;
+          width: 20%;
+        }
+        .date {
+          color: $scoreListDateColor;
+          margin-left: 30%;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .game-info {
+    display: none;
+    z-index: 3;
+    position: absolute;
+    top: 7%;
+    width: 100%;
+    height: 100%;
+    .container {
+      background-color: #f0f0f0;
+      height: 100%;
+      .content {
+        padding: 1% 5%;
+        font-size: 80%;
+      }
+    }
+  }
+
+  .footer {
+    position: absolute;
+    z-index: 10;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer * {
+    margin: auto;
+  }
+
+  .saying {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    font-size: 500%;
+    color: $sayingColor;
+  }
+
+  .dot-template, .score-template, .size-warning {
+    display: none;
+  }
+
+  .size-warning {
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #ffc;
+    .content {
+      padding: 5%;
+    }
+  }
+
+  .container {
+    margin: auto;
+    position: relative;
+  }
+
+}
+
+

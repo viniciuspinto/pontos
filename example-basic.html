@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf8">
+    <title>Example - Basic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link href="dist/style.min.css" rel="stylesheet" type="text/css">
+    <style>
+      body {
+        background-color: #000;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="example-container">
+    </div>
+
+    <script src="dist/pontos.full.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      Pontos.GameManager.load({
+        container: $('#example-container'),
+        filesPath: 'dist/',
+        width: 400
+      });    
+    </script>
+
+  </body>
+
+</html>

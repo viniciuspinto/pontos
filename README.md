@@ -1,6 +1,6 @@
 # Pontos
 
-A partial clone of the ![Dots](http://weplaydots.com/) game (buy the original, it's awesome!). See a themed version at ![http://dogedots.com/](http://dogedots.com/)
+A partial clone of the [Dots](http://weplaydots.com/) game (buy the original, it's awesome!). See a themed version at [http://dogedots.com/](http://dogedots.com/)
 
 ## Features
 
@@ -124,12 +124,12 @@ playedGames: [
 
 This game uses code from the following projects:
 
-- ![jQuery](http://jquery.com)
-- ![jQuery Mobile](http://jquerymobile.com)
-- ![Cookies.js](https://github.com/ScottHamper/Cookies)
-- ![Modernizr](http://modernizr.com/)
-- ![viewportSize](https://github.com/tysonmatanich/viewportSize)
-- ![animate.css](https://github.com/daneden/animate.css)
+- [jQuery](http://jquery.com)
+- [jQuery Mobile](http://jquerymobile.com)
+- [Cookies.js](https://github.com/ScottHamper/Cookies)
+- [Modernizr](http://modernizr.com/)
+- [viewportSize](https://github.com/tysonmatanich/viewportSize)
+- [animate.css](https://github.com/daneden/animate.css)
 
 ## License
 

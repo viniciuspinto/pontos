@@ -1,6 +1,6 @@
 # Pontos
 
-A partial clone of the [Dots](http://weplaydots.com/) game (buy the original, it's awesome!). See a demo at [http://viniciuspinto.github.io/pontos/index.html](http://viniciuspinto.github.io/pontos/index.html) and a themed version at [http://dogedots.com/](http://dogedots.com/)
+A partial clone of the [Dots](http://weplaydots.com/) game in JS. [Demo](http://viniciuspinto.github.io/pontos/index.html).
 
 ## Features
 
